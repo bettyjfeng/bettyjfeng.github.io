@@ -1,0 +1,93 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'Official website of Jing Betty Feng, Professor and SUNY AI for Public Good Fellow working at the intersection of AI, global business, innovation, and workforce learning.',
+  ogTitle,
+  ogDescription,
+  ogImage = '/og-image.jpg',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const resolvedOgTitle = ogTitle || title;
+const resolvedOgDescription = ogDescription || description;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={resolvedOgTitle} />
+    <meta property="og:description" content={resolvedOgDescription} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedOgTitle} />
+    <meta name="twitter:description" content={resolvedOgDescription} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jing Betty Feng",
+        "jobTitle": "Professor",
+        "description": "Professor and SUNY AI for Public Good Fellow working at the intersection of AI, global business, innovation, and workforce learning.",
+        "url": "https://bettyjfeng.github.io"
+      })}
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-4);
+    background: var(--color-accent);
+    color: #fff;
+    padding: var(--space-2) var(--space-4);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 9999;
+    transition: top 0.1s;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+</style>

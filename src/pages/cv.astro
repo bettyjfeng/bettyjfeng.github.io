@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="CV | Jing Betty Feng"
+  description="Download the full curriculum vitae of Jing Betty Feng, Professor and SUNY AI for Public Good Fellow."
+>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__label">Curriculum Vitae</p>
+      <h1 class="page-hero__title">Full Academic Record</h1>
+      <p class="page-hero__intro">
+        Betty's complete CV is available for download below — including publications,
+        grants, teaching, leadership, and service.
+      </p>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD SECTION -->
+  <section class="section" aria-labelledby="cv-download-heading">
+    <div class="container container--prose">
+      <div class="cv-download-block">
+        <div class="cv-icon" aria-hidden="true">📄</div>
+        <h2 id="cv-download-heading">Download CV</h2>
+        <p>
+          Betty's curriculum vitae includes a complete record of her academic
+          career: publications, conference presentations, courses taught,
+          grants and fellowships, leadership and service, and professional background.
+        </p>
+        <div class="btn-group" style="margin-top:var(--space-8);">
+          <a href="/cv.pdf" download class="btn btn--primary" aria-label="Download CV as PDF">
+            ↓ &nbsp;Download PDF
+          </a>
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--outline" aria-label="Open CV in new tab">
+            View in Browser
+          </a>
+        </div>
+        <p class="cv-note">
+          If you have difficulty viewing the PDF, please
+          <a href="/contact">contact Betty directly</a> to request a copy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV HIGHLIGHTS -->
+  <section class="section section--alt" aria-labelledby="highlights-heading">
+    <div class="container">
+      <div class="section-header--center">
+        <p class="section-label">At a Glance</p>
+        <h2 id="highlights-heading">Selected Highlights</h2>
+        <p class="section-intro text-center" style="margin-inline:auto;">
+          A snapshot of Betty's academic record. The full CV contains complete detail.
+        </p>
+      </div>
+
+      <div class="cv-highlights-grid">
+        <div class="cv-highlight-section">
+          <h3>Education</h3>
+          <ul class="cv-list">
+            <li>
+              <strong>Ph.D., Business / Management</strong>
+              <span>Graduate Institution</span>
+            </li>
+            <li>
+              <strong>M.B.A. or relevant Master's</strong>
+              <span>Graduate Institution</span>
+            </li>
+            <li>
+              <strong>B.A. / B.S. — Undergraduate</strong>
+              <span>Undergraduate Institution</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv-highlight-section">
+          <h3>Academic Appointments</h3>
+          <ul class="cv-list">
+            <li>
+              <strong>Professor of Business</strong>
+              <span>SUNY Farmingdale State College</span>
+            </li>
+            <li>
+              <strong>SUNY AI for Public Good Fellow</strong>
+              <span>SUNY System</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv-highlight-section">
+          <h3>Selected Grants &amp; Fellowships</h3>
+          <ul class="cv-list">
+            <li>SUNY AI for Public Good Fellowship</li>
+            <li>Workforce Development &amp; AI Readiness Grant</li>
+            <li>Offshore Wind Workforce Education Partnership</li>
+            <li>Sustainability &amp; Global Supply Chain Research Grant</li>
+          </ul>
+        </div>
+
+        <div class="cv-highlight-section">
+          <h3>Selected Publications</h3>
+          <ul class="cv-list">
+            <li>Journal of International Business Studies</li>
+            <li>International Business Review</li>
+            <li>Journal of World Business</li>
+            <li>Journal of Management Education</li>
+            <li>Academy of Management Learning &amp; Education</li>
+          </ul>
+        </div>
+
+        <div class="cv-highlight-section">
+          <h3>Academic Service</h3>
+          <ul class="cv-list">
+            <li>Academy of International Business — Member &amp; Service Leader</li>
+            <li>AACSB Assessment Committee</li>
+            <li>Innovation Challenge Faculty Lead</li>
+            <li>Journal Reviewer — Multiple Outlets</li>
+          </ul>
+        </div>
+
+        <div class="cv-highlight-section">
+          <h3>Teaching Areas</h3>
+          <ul class="cv-list">
+            <li>International Business &amp; Management</li>
+            <li>AI and Business Innovation</li>
+            <li>Innovation &amp; Entrepreneurship</li>
+            <li>Sustainability &amp; Global Business</li>
+            <li>Strategy &amp; Negotiation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-full-cta">
+        <p>This is a condensed overview only. For the full academic record:</p>
+        <a href="/cv.pdf" download class="btn btn--primary">Download Full CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT LINK -->
+  <section class="section" aria-label="Contact">
+    <div class="container text-center">
+      <p class="section-label">Questions?</p>
+      <h2 style="margin-bottom:var(--space-4);">Looking for Something Specific?</h2>
+      <p style="color:var(--color-text-muted);max-width:480px;margin:0 auto var(--space-8);">
+        If you need a speaker bio, a one-page overview, or have questions
+        about Betty's work, please get in touch directly.
+      </p>
+      <a href="/contact" class="btn btn--outline">Contact Betty</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .cv-download-block {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-12) var(--space-10);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+  .cv-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-4);
+  }
+  .cv-download-block h2 {
+    margin-bottom: var(--space-4);
+  }
+  .cv-download-block p {
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+  .cv-note {
+    margin-top: var(--space-6) !important;
+    font-size: var(--text-sm) !important;
+    color: var(--color-text-light) !important;
+    font-style: italic;
+  }
+
+  /* Highlights grid */
+  .cv-highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-10);
+  }
+  @media (max-width: 860px) { .cv-highlights-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 500px) { .cv-highlights-grid { grid-template-columns: 1fr; } }
+
+  .cv-highlight-section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+  }
+  .cv-highlight-section h3 {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .cv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .cv-list li {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.4;
+  }
+  .cv-list li strong {
+    display: block;
+    color: var(--color-text);
+    font-weight: 500;
+  }
+  .cv-list li span {
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+  }
+
+  .cv-full-cta {
+    text-align: center;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border-light);
+  }
+  .cv-full-cta p {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-4);
+  }
+</style>
